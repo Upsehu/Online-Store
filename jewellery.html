@@ -8,14 +8,37 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    
+    <div id="navbar">
+
+    </div>
+
+    <div id="container">
+
+    </div>
 </body>
 </html>
 
 <script type='module'>
 
-
     import x from '/components/navbar.js';
+    import {getData, append} from './scripts/showData.js'
 
-    document.body.innerHTML = x();
+
+    let navbar_div = document.getElementById('navbar');
+
+    navbar_div.innerHTML = x();
+    
+    let response = getData(`https://fakestoreapi.com/products/category/jewelery
+`)
+    
+    response.then((res) =>{
+
+        let container = document.getElementById('container'); 
+
+        append(res, container);
+    });
+
+  
+    
+    
 </script>

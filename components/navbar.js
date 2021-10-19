@@ -1,6 +1,6 @@
 function navbar(){
 
-    return `<div id="navbar">
+    return `
 
     <h3><a href="/">Home</a></h3>
 
@@ -12,9 +12,8 @@ function navbar(){
         <!-- <h3><a href="jewwllery.html"></a></h3> -->
 
     </div>
-</div>`;
+    `;
 }
-
 
 export default navbar
 
